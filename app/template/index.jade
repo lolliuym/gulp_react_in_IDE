@@ -1,0 +1,290 @@
+doctype html
+
+html(lang="en")
+
+    head
+        meta(charset='utf-8')
+        title react_gulp
+        meta(name='description', content='')
+        meta(name='viewport', content='width=device-width')
+        // Place favicon.ico and apple-touch-icon.png in the root directory
+        link(rel='stylesheet', href='styles/main.css')
+
+        // build:js scripts/vendor/modernizr.js
+        script(src='bower_components/modernizr/modernizr.js')
+        // endbuild
+        meta(property='og:url', content='http://www.your-domain.com/your-page.html')
+        meta(property='og:title', content='Your Website Title')
+        meta(property='og:type', content='website')
+        meta(property='og:description', content='Your description')
+        meta(property='og:image', content='http://www.your-domain.com/path/image.jpg')
+
+    body
+        //if lt IE 10
+          p.browsehappy
+            | You are using an
+            strong outdated
+            |  browser. Please
+            a(href='http://browsehappy.com/') upgrade your browser
+            |  to improve your experience.
+        // Load Facebook SDK for JavaScript
+        #fb-root
+        script.
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.10";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+
+
+        // Главное меню
+
+
+    div.main-page
+        nav.navbar.navbar-default
+            div.container-fluid.menu-top
+                div.logo-and-feedback
+                    img.logo(src='images/logotype.png', alt='Логотип')
+                    div.feedback-in-top.right
+                        a.calculate-the-cost(href='/') Расчитать стоимость
+                        div.right
+                            p.work-time с 9 до 21 без выходных
+                            p.phone +7 495 534-65-33
+
+                ul.nav.navbar-nav
+                    li
+                        a(href='/about-company/') О компании
+                    li
+                        a.active(href='/price/') Цены
+                    li.menu-link-large
+                        a(href='/services-and-products/') Услуги и продукты
+                    li
+                        a(href='/stocks/') Акции
+                    li
+                        a(href='/contacts/') Контакты
+
+        // Медиаконтент
+        div.topic-page
+            p.main-topic Цветные пластиковые окна
+            p.topic Ламинируем профиль ПВХ для предания окнам цвета и фактуры дерева
+        div.media-content
+
+
+            // Медиаконтент -> Левая панель
+
+            div.left-side
+                p Рекомендуем также
+                ul.list-of-products
+                    li
+                        a(href='/edingurgh-by-rehau/') Edingurgh by REHAU
+                    li
+                        a(href='/estet-by-rehau/') Estet by REHAU
+                    li
+                        a(href='/rehau-delight-design/') REHAU DELIGHT-Design
+                    li
+                        a(href='/rehau-brilliant-design/') REHAU BRILLIANT-Design
+                    li
+                        a(href='/rehau-geneo/') REHAU Geneo
+                    li
+                        a(href='/color-window/') Цветные окна
+                    li
+                        a(href='/double-glazed-windows/') Стеклопакеты
+                    li
+                        a(href='/glazing-of-balconies-and-loggias/') Остекление балконов и лоджий
+                    li
+                        a(href='/finishing-and-warming-of-balconies/') Отделка и утепление балконов
+                    li
+                        a(href='/balcony-blocks/') Балконные блоки
+
+            // Медиаконтент -> Основной контент
+
+            div.section
+
+                // Медиаконтент -> Основной контент -> Интрерьер с цветными окнами
+
+                div.container
+                    p.topic-container Создайте выразительный интерьер с  цветными окнами REHAU
+                    div.-condition
+                        div.img-of-windows-in-incision
+                            img(src='images/window-in-incision.png',alt='Окно в разрезе')
+                            p Ирландский дуб
+                        div.-description-new
+                            h3.topic Цветное окно REHAU ЭСТЕТ
+                            p.subtopic Создайте выразительный интерьер с цветными окнами REHAU
+                            ul.-status
+                                li
+                                    span Точная визуализация натурального дерева.
+                                li
+                                    span Яркие нестандартные цвета в тон или в дополнение интерьера.
+                                li
+                                    span Разные фактуры для Ваших пластиковых окон.
+                            ul.-price
+                                li
+                                    p.old-price старая цена:
+                                    p.new-price новая цена:
+                                li
+                                    p.grey-text от 23 026 р/м
+                                        sup 2
+                                    p.-price-of-ruble-per-meter.red-text.is-dashed от 11 250 р/м
+                                        sup 2
+                                li
+                                    p.grey-text скидка
+                                    p.red-text -53%
+                                li
+                                    p.grey-text действует
+                                    p.red-text с 15 по 20
+                                    p февраля
+
+                            button.-stock Рассчитать со скидкой 70%
+                            a.grey-text.is-underlined(href='') или отправить заявку и получить консультацию
+
+                        div.-description 
+                            ul.-status
+                                li
+                                    span Точная визуализация натурального дерева.
+                                li
+                                    span Яркие нестандартные цвета в тон или в дополнение интерьера.
+                                li
+                                    span Разные фактуры для Ваших пластиковых окон.
+                            p.choose-color-of-the-material Подберите цвет для своих окон:
+                            ul.choose-of-material
+                                li
+                                    img(src='images/wood-color/wood-1.png',alt='Дерево-1')
+                                    div.is-choice
+                                li
+                                    img(src='images/wood-color/wood-2.png',alt='Дерево-2')
+                                    div                                        
+                                li
+                                    img(src='images/wood-color/wood-3.png',alt='Дерево-3')
+                                    div                                        
+                                li
+                                    img(src='images/wood-color/wood-4.png',alt='Дерево-4')
+                                    div                                        
+                                li
+                                    img(src='images/wood-color/wood-5.png',alt='Дерево-5')
+                                    div                                        
+                                li      
+                                    img(src='images/wood-color/wood-6.png',alt='Дерево-6')
+                                    div                                        
+                                li
+                                    img(src='images/wood-color/wood-7.png',alt='Дерево-7')
+                                    div                                        
+                            p.variants-of-colors-and-textures Больше 50 вариантов цветов и фактур спращивайте у нащих замерщиков
+                            ul.-price
+                                li
+                                    p цена:
+                                    p.-price-of-ruble-per-meter.red-text.is-dashed от 4 214 р/м
+                                        sup 2
+                                li
+                                    p.grey-text скидка
+                                    p.red-text -70%
+                                li
+                                    p.grey-text действует
+                                    p.red-text с 15 по 20
+                                    p февраля
+                            button.-stock Рассчитать со скидкой 70%
+                            a.grey-text.is-underlined(href='') или отправить заявку и получить консультацию
+
+
+                // Медиаконтент -> Основной контент -> Характеристика окон
+
+                div.container.-characteristic
+                    p.topic Зачем использовать ламинацию
+                    ul.-using
+                        li
+                            img(src='images/forma.png',alt='Слои материалов')
+                            p Чтобы придать внешнему виду окна оригинальную выразительность, специалисты применяют ламинацию – приём, при помощи которого можно декорировать своё жилье с учетом самых современных веяний дизайнерского искусства.
+                        li
+                            img(src='images/shape.png',alt='Дерево')
+                            p При помощи ламинации оконного профиля можно, например, со всей точностью воспроизвести оттенки и структуру древесины: при этом обеспечивается полная визуализация натурального дерева, точно имитирующая расположение волокон. Помимо имитации деревянных поверхностей, применяют пленку самых разных цветов и фактур.
+                    h3 Как окна остановятся цветными?
+                    ol.-processor
+                        li
+                            p Собственно, процесс ламинации профиля ПВХ состоит в процедуре нанесения на его поверхность декоративных высокопрочных плёнок с применением специального клея и ламинирующих установок.
+                        li
+                            p Плёнку прочно соединяют с профилем. При этом внешней стороне пленки свойственна высокая стойкость к повреждениям. В частности, цветное пластиковое окно, прошедшее процесс ламинации, стойко переносит температурные колебания в диапазоне от -80°С до +130°С, оно исключительно стойко к солнечному излучению.
+                        li
+                            p Пластиковые окна, прошедшие процесс ламинации профилей, имеют срок службы гораздо больший, чем не ламинированные окна. В сравнении с окнами из массива дерева, они значительно дешевле.
+
+
+                // Медиаконтент -> Основной контент -> Отзывы
+
+                div.topic-review
+                    p.topic Отзывы о цветных пластиковых окнах
+                    a.see-all-reviews.text-to-right.red-text(href='/') посмотреть еще отзывы
+                div.container.-reviews
+                    div
+                        p Алена,
+                        p.grey-text Договор № 09.10.33512.13
+                        p.grey-text Дата размещения: 13 декабря 2013 года
+                        ul.-valuation
+                            li
+                                div.star.is-actived
+                            li
+                                div.star.is-actived
+                            li
+                                div.star.is-actived
+                            li
+                                div.star.is-actived
+                            li
+                                div.star.is-actived
+                        p Поставили нам окна во всей квартире.Все очень понравилось)))компания на 5+.Все очень любезные,гибкая система скидок!!!буду советовать всем!!!Сервис был на высоте,во-первых с поставкой получилось быстрее,во-вторых два раза приезжал замерщик Алексей,ему большое спасибо...
+                        a.read-completely(href='/')
+                            div
+                            p.red-text.is-dashed прочитать полностью
+                    div
+                        button.give-feedback(type='button') Оставить отзыв
+                        .fb-like(data-href='https://developers.facebook.com/docs/plugins/', data-layout='standard', data-action='like', data-size='small', data-show-faces='false', data-share='false')
+
+        // Footer
+    div.footer
+        div
+            ul.menu-bottom
+                li
+                    a(href='/about-company/') О компании
+                li
+                    a(href='/price/') Цены
+                li.menu-link-large
+                    a(href='/services-and-products/') Услуги и продукты
+                li
+                    a(href='/stocks/') Акции
+                li
+                    a(href='/contacts/') Контакты
+
+            div.contact-in-footer
+                p Тел.:
+                    span +7 495 534-65-33
+                    |    (многоканальный)
+                p E-mail:
+                    a.email-in-footer.red-text.is-underlined order@oknapolis.ru
+
+        script.
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.10";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+
+        // build:js scripts/vendor.js
+        // bower:js
+        script(src='bower_components/jquery/dist/jquery.js')
+
+        script(src='bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.min.js')
+
+        // endbower
+        // endbuild
+        script(src='scripts/app.js')
+        // Google Analytics: change UA-XXXXX-X to be your site's ID.
+        script.
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+                function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+                e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+                e.src='//www.google-analytics.com/analytics.js';
+                r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
